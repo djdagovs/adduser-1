@@ -1,0 +1,7 @@
+#!/bin/bash
+
+useradd -d /home/$1 -s /bin/bash $1 \
+&& passwd $1 \
+&& usermod -a -G sudo $1 \
+&& mkdir /home/$1 \
+&& chown guoxi:guoxi /home/$1
