@@ -11,10 +11,12 @@ apt-get update
 
 apt-get purge lxc-docker*
 
-apt-get install docker-engine
+apt-get install -y docker-engine
 
 echo "DOCKER_OPTS=\"-g /mnt/ssd/docker -l warn\"" >> /etc/default/docker
 
 service docker restart
+
+usermod -a -G docker guoxi
 
 ps aux | grep docker
