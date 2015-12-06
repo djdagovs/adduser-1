@@ -1,23 +1,13 @@
 #!/bin/bash
 
 
-set -e
+
+source add_util.sh
 
 
+prepare-add
+#add-node guoxi@10.190.172.144
+#verify-node guoxi@10.190.172.144
+#add-nodes
 
-function prepare_add() {
-
-    source "${KUBE_ROOT}/cluster/ubuntu/util.sh"
-    source "${KUBE_ROOT}/cluster/ubuntu/config-default.sh"
-
-    setClusterInfo
-
-}
-
-
-function add-node() {
-    # add node to current cluster
-    
-    
-
-}
+remove-node guoxi@10.190.172.144
