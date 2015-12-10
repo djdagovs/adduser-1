@@ -4,7 +4,7 @@
 set -e
 
 
-nodes_add=$(cat add_node.config)
+nodes_add=$(cat add_ssd_nodes2.config)
 
 
 

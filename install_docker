@@ -9,11 +9,11 @@ echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" >> /etc/apt/sou
 
 apt-get update
 
-apt-get purge lxc-docker*
+apt-get purge -y lxc-docker* docker-engine
 
 apt-get install -y docker-engine
 
-echo "DOCKER_OPTS=\"-g /mnt/ssd/docker -l warn\"" >> /etc/default/docker
+echo "DOCKER_OPTS=\"-l warn\"" >> /etc/default/docker
 
 service docker restart
 
